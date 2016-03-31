@@ -1,0 +1,23 @@
+﻿version: '2'
+services:
+  sut:
+    build: 
+      context: .
+      dockerfile: Dockerfile.test
+    image: ci-tests
+    container_name: ci-tests
+    networks:
+      - test
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: ci-webapi
+    container_name: ci-webapi
+    ports:
+      - "80:5000"
+    networks:
+      - test
+
+networks:
+  test:

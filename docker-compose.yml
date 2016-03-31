@@ -1,0 +1,10 @@
+﻿version: '2'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: gnschenker/webapi
+    container_name: webapi
+    ports:
+      - "80:5000"
