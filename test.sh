@@ -1,13 +1,9 @@
-echo "========================="
-echo "Now sleeping for 10"
-sleep 10   #give the web api time to start up...
-echo "========================="
-url="web:5000/api/projects"
-echo "now accessing: ${url}"
-if curl ${url} | grep -q '{"id":1,"name":"Heart Beat"}'; then
-  echo "Test passed!"
+sleep 10
+if curl web:5000/api/projects | grep -q '{"id":1,"name":"Heart Beat"}'; then
+  echo "Success"
   exit 0
 else
-  echo "Test failed!"
+  echo "Fail!"
   exit 1
 fi
+
