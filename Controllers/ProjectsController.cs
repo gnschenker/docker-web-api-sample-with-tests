@@ -13,6 +13,7 @@ namespace src.Controllers
             new Project {id = 2, name = "Bootcamp"}, 
             new Project {id = 3, name = "Paradise"}, 
             new Project {id = 4, name = "Eden"}, 
+            new Project {id = 5, name = "Mystery"}, 
         };
 
         [HttpGet]
