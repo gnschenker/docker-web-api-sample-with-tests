@@ -1,5 +1,5 @@
 echo "Waiting for Web API to be ready"
-sleep 12
+sleep 15
 
 if curl web:5000/api/projects/5 | grep -q '{"id":5,"name":"Mystery"}'; then
   echo "api/projects/5 succeeded"
